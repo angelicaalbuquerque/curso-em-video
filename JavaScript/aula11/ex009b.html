@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BRASILEIRO OU ESTRANGEIRO?</title>
+  <style>
+    body{
+      background: rgb(3, 165, 165);
+    }
+  </style>
+  </head>
+
+  <body>
+
+    <h1>Qual é a sua origem?</h1>
+
+    Onde você nasceu? <input type="text" name="ondenasceu" id="ondenasceu">
+   <input type="button" value="Confirmar" onclick="verificar()">
+
+   <div id="res">
+   </div>
+   
+    <script>
+
+      function verificar(){
+        var txtondenasceu = document.querySelector("input#ondenasceu")
+        var nascimentoem = txtondenasceu.value
+        var res = window.document.querySelector("div#res")
+
+        res.innerHTML = `<p>Você nasceu no país ${nascimentoem}.</p>`
+
+        if (nascimentoem == "Brasil")
+        {
+         res.innerHTML += `<p>Logo, você é brasileiro.</p>`
+        } 
+        else if (nascimentoem != "Brasil")
+        {
+          res.innerHTML += `<p>Sendo assim, você é estrangeiro.</p>`
+        }
+      }      
+
+    </script>
+
+  </body>
+</html>
+
+
+
+
